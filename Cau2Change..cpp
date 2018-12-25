@@ -25,6 +25,22 @@ using namespace std;
 			stt + 1;
 		return stt; 
 	}
+	NgayThang ngayTuSTT(int stt, int Year){
+	}
+	NgayThang congNgayThang(NgayThang n, int x){
+		int kq = x + TimSTT(n);
+		int Year = n.Year;
+		if(kq <= 365)
+			return ngayTuSTT(kq, Year);
+		else
+			if(NamNhuan(Year) == 1)
+				if(kq == 366)
+					return ngayTuSTT(kq, Year);
+				else
+					return ngayTuSTT(kq - 366, Year + 1);
+			else
+				return ngayTuSTT(kq - 365, Year + 1); 
+	}
 int main()
 {
 	string ST;
