@@ -47,24 +47,24 @@ int main()
 		cout <<"Nhap giu lieu vao: ";
 		getline(cin, ST);
 		NgayThang D;
-		char t[4];
-		t[0] = ST[0];
-		t[1] = ST[1];
-		D.Date = atoi(t);
-		t[0] = ST[3];
-		t[1] = ST[4];
-		D.Month = atoi(t);
-		t[0] = ST[6];
-		t[1] = ST[7];
-		t[2] = ST[8];
-		t[3] = ST[9];
-		D.Year = atoi(t);
-		cout << "Ngay " << D.Date << " thang " << D.Month << " nam " << D.Year;
-		if(NamNhuan(D.Year) == 1)
-			cout<< "\nLa nam nhuan!";
-		else
-			cout<< "\nLa nam khong nhuan!";
-		cout<<"\nLa ngay thu "<<TimSTT(D)<<" trong nam !";
+			char t[4];
+				t[0] = ST[0];
+				t[1] = ST[1];
+			D.Date = atoi(t);
+				t[0] = ST[3];
+				t[1] = ST[4];
+			D.Month = atoi(t);
+				t[0] = ST[6];
+				t[1] = ST[7];
+				t[2] = ST[8];
+				t[3] = ST[9];
+			D.Year = atoi(t);
+			cout << "Ngay " << D.Date << " thang " << D.Month << " nam " << D.Year;
+			if(NamNhuan(D.Year) == 1)
+				cout<< "\nLa nam nhuan!";
+			else
+				cout<< "\nLa nam khong nhuan!";
+			cout<<"\nLa ngay thu "<<TimSTT(D)<<" trong nam !";
 		
 		
 //		
