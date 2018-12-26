@@ -26,6 +26,19 @@ using namespace std;
 		return stt; 
 	}
 	NgayThang ngayTuSTT(int stt, int Year){
+		NgayThang TimNgay;
+		int i=1;
+			while (stt > Month[i]){
+				stt-=Month[i];
+				i++;
+				if (NamNhuan(Year)==1 && i==2)
+					Month[i]=29;
+			}
+			TimNgay.Month = i;
+			TimNgay.Date = stt;
+			TimNgay.Year = Year;
+				Month[2]=28;
+	return TimNgay;
 	}
 	NgayThang congNgayThang(NgayThang n, int x){
 		int kq = x + TimSTT(n);
